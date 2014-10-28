@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+CSV.read('./drinks.csv') do |csv|
+   Drink.create(name: csv[0], description: csv[1])
+end

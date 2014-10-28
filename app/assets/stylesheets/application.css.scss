@@ -1,0 +1,50 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+  font-family: 'Oswald', sans-serif;
+   background: url('http://i0.wp.com/notwithoutsalt.com/wp/wp-content/uploads/IMG_9129.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+html h1 a:hover {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  max-width: 900px;
+  margin-top: 3%;
+}
+
+html h1 a {
+  color: #EFE543;
+text-transform: uppercase;
+font-size: 5.4em;
+display: inline;
+}
+
+h2 {
+  color: white;
+  margin-top: 0;
+}
+
+form#q {
+display: inline;
+position: absolute;
+top: 5%;
+right: 0;
+}
+
+.form-control {
+  width: 50%;
+}
+
+section {
+  margin: 10% 20% 0 20%;
+}

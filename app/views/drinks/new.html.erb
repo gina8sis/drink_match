@@ -1,0 +1,30 @@
+<%= form_for @drink do |f| %>
+
+    <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => "form-control", :rows => '3'  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :recipe %>
+    <%= f.text_area :recipe, :class => "form-control", :rows => '3' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :strength %>
+    <%= f.select :strength, %w(1 2 3 4 5), {},  :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :'how challenging?' %>
+    <%= f.select :risk, %w(1 2 3 4 5), {},  :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :color %>
+    <%= f.select :color, %w(light dark), {},  :class => "form-control" %>
+  </div>
+
+<button type="submit" class="btn btn-default">Add</button>
+
+<% end %>
