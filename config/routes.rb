@@ -3,8 +3,12 @@ Rails.application.routes.draw do
 root 'drinks#index'
 
 get '/occasion' => 'occasions#index'
-get '/season' => 'seasons#index'
+post '/occasion' => 'seasons#index'
+get '/season' => 'seasons#index'#, :as => 'season_path'
 get '/flavor' => 'flavors#index'
+post '/flavor' => 'flavors#index'
+get '/search' => 'drinks#search'
+get '/output' => 'drinks#output'
 
 
 

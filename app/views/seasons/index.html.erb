@@ -1,0 +1,17 @@
+<h2>It's <%= Time.now.strftime(" %B") %>.</h2>
+
+<%= form_tag do %>
+
+<%= button_to 'Feel like a warm weather cocktail?', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to "Doesn't matter", flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'I want the opposite!', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'Feel like a feel like a cold weather cocktail?', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to "Doesn't matter", flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'I want the opposite!', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<% end %>

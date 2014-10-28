@@ -1,7 +1,27 @@
 <h2>It's <%= Time.now.strftime("%I:%M%p") %>. What are you doing?</h2>
 
-<button type="button" class="btn btn-default btn-lg btn-block"><%= link_to 'At a garden party?', occasion_path %></button>
+<%= form_tag do %>
 
-<button type="button" class="btn btn-default btn-lg btn-block"><%= link_to 'At a garden party?', occasion_path %></button>
+<%= button_to 'At a garden party', season_path, :class => "btn btn-default btn-lg btn-block" %>
 
-<button type="button" class="btn btn-default btn-lg btn-block"><%= link_to 'At a garden party?', occasion_path %></button>
+<%= button_to 'On vacation', season_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'Day drinking!', season_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'Date night drinks', season_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'Out with friends', season_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<%= button_to 'Just a night in', season_path, :class => "btn btn-default btn-lg btn-block" %>
+
+<% end %>
+
+<!-- form /whatver
+
+if earlier than 6
+  button name="party"
+  button name="vacation"
+else
+  button name='night_in'
+end -->
+

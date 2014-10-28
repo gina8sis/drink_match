@@ -1,5 +1,5 @@
 class Season < ActiveRecord::Base
 
-has_many :drinks
+has_and_belongs_to_many :drinks
 
 end
