@@ -12,21 +12,26 @@ body {
   color: white;
 }
 
-html h1 a:hover {
-  text-decoration: none;
-}
-
 .container {
   position: relative;
   max-width: 900px;
-  margin-top: 3%;
+}
+
+header {
+  width: 50%;
 }
 
 html h1 a {
   color: #EFE543;
 text-transform: uppercase;
-font-size: 5.4em;
+font-size: 4em;
 display: inline;
+line-height: 1em;
+}
+
+html h1 a:hover {
+  color: #FFFF31;
+  text-decoration: none;
 }
 
 h2 {
@@ -34,11 +39,14 @@ h2 {
   margin-top: 0;
 }
 
-form#search {
-display: inline;
+#search {
 position: absolute;
 top: 5%;
-right: 0;
+left: 80%;
+}
+
+check_box_tag {
+
 }
 
 .form-control {

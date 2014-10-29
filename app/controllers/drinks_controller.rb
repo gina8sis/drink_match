@@ -9,6 +9,33 @@ class DrinksController < ApplicationController
     @drinks = (@drinks + @drink_recipe).uniq
   end
 
+
+  def first_screen
+    session['game'] = {}
+    session['game']['occasion'] = params[:occasion].keys.first
+    #raise 'erer'
+    redirect_to '/season'
+  end
+
+  def second_screen
+    session['game']['season'] = params[:season].keys.first
+    redirect_to '/flavor'
+  end
+
+  def third_screen
+   session['game']['flavor'] = params[:flavor]
+   redirect_to '/output'
+  end
+
+  def output
+    @drink = Drink.first
+
+  end
+
+  def get_drink
+
+  end
+
   def new
     @drink = Drink.new
   end
@@ -36,9 +63,6 @@ end
     redirect_to(show_path)
   end
 
-  def output
-    raise
-  end
 
 end
 

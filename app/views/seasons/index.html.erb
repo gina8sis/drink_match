@@ -1,17 +1,20 @@
 <h2>It's <%= Time.now.strftime(" %B") %>.</h2>
 
-<%= form_tag do %>
+<%= form_tag '/season' do %>
 
-<%= button_to 'Feel like a warm weather cocktail?', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+  <% if Date.today.month == [4..9] %>
+    <%= button_tag 'Feel like a summery cocktail?', :name => 'season[warm_weather]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to "Doesn't matter", flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag "Doesn't matter", :name => 'season[no_matter]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'I want the opposite!', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'I want the opposite!', :name => 'season[cold_weather]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'Feel like a feel like a cold weather cocktail?', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+  <% else %>
+    <%= button_tag 'Feel like a wintery cocktail?', :name => 'season[cold_weather]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to "Doesn't matter", flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag "Doesn't matter", :name => 'season[no_matter]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'I want the opposite!', flavor_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'I want the opposite!', :name => 'season[warm_weather]', :class => "btn btn-default btn-lg btn-block" %>
+  <% end %>
 
 <% end %>

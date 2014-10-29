@@ -1,19 +1,23 @@
-<h2>It's <%= Time.now.strftime("%I:%M%p") %>. What are you doing?</h2>
+<h2>So, it's <%= Time.now.strftime("%I:%M%p") %>. What are you up to?</h2>
 
-<%= form_tag do %>
+<%= form_tag '/occasion' do %>
+  <% if Time.now.hour < 18 %>
 
-<%= button_to 'At a garden party', season_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'At a garden party', :name => 'occasion[day_party]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'On vacation', season_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'On vacation', :name => 'occasion[vacation]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'Day drinking!', season_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'Day drinking!', :name => 'occasion[day_drinking]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'Date night drinks', season_path, :class => "btn btn-default btn-lg btn-block" %>
+  <% else %>
 
-<%= button_to 'Out with friends', season_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'Dinner and drinks', :name => 'occasion[dinner_drinks]', :class => "btn btn-default btn-lg btn-block" %>
 
-<%= button_to 'Just a night in', season_path, :class => "btn btn-default btn-lg btn-block" %>
+    <%= button_tag 'Just out for drinks', :name => 'occasion[evening_drinks]', :class => "btn btn-default btn-lg btn-block" %>
 
+    <%= button_tag 'A night in', :name => 'occasion[night_in]', :class => "btn btn-default btn-lg btn-block" %>
+
+  <% end %>
 <% end %>
 
 <!-- form /whatver
@@ -24,4 +28,6 @@ if earlier than 6
 else
   button name='night_in'
 end -->
+
+
 

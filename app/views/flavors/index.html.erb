@@ -1,50 +1,52 @@
 <h2>Almost there! Pick two:</h2>
 
 <div class="row">
-  <div class="col-md-6">
 
-    <%= form_tag do %>
+   <%= form_tag '/flavor' do %>
 
-<%= check_box_tag(:fruity) %>
-<%= label_tag(:fruity, "Fruity") %>
+    <div class="col-md-3">
+        <%= check_box_tag('flavor[]', 'fruity')  %>
+        <%= label_tag(:fruity, "Fruity") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'bitter') %>
+        <%= label_tag(:bitter, "Bitter") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'tropical') %>
+        <%= label_tag(:tropical, "Tropical") %>
+    </div>
 
-<%= check_box_tag(:tropical) %>
-<%= label_tag(:tropical, "Tropical") %>
+    <div class="col-md-3">
+        <%= check_box_tag('flavor[]', 'herbal') %>
+        <%= label_tag(:herbal, "Herbal") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'citrusy') %>
+        <%= label_tag(:citrusy, "Citrusy") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'sweet') %>
+        <%= label_tag(:sweet, "Sweet") %>
+    </div>
 
-<%= check_box_tag(:bitter) %>
-<%= label_tag(:bitter, "Bitter") %>
-
-<%= check_box_tag(:herbal) %>
-<%= label_tag(:herbal, "Herbal") %>
-
-<%= check_box_tag(:citrusy) %>
-<%= label_tag(:citrusy, "Citrusy") %>
-
-<%= check_box_tag(:sweet) %>
-<%= label_tag(:sweet, "Sweet") %>
-</div>
-
-<div class="col-md-6">
-<%= check_box_tag(:dry) %>
-<%= label_tag(:dry, "Dry") %>
-
-<%= check_box_tag(:refreshing) %>
-<%= label_tag(:refreshing, "Refreshing") %>
-
-<%= check_box_tag(:light) %>
-<%= label_tag(:light, "Light") %>
-
-<%= check_box_tag(:dark) %>
-<%= label_tag(:dark, "Dark") %>
-
-<%= check_box_tag(:intense) %>
-<%= label_tag(:intense, "Intense") %>
-
-<%= check_box_tag(:challenging) %>
-<%= label_tag(:challenging, "Challenging") %>
-
-</div>
-
-<button type="submit" class="btn btn-default">Submit</button>
+    <div class="col-md-3">
+        <%= check_box_tag('flavor[]', 'dry') %>
+        <%= label_tag(:dry, "Dry") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'refreshing') %>
+        <%= label_tag(:refreshing, "Refreshing") %>
+        <br>
+        <%= check_box_tag( 'flavor[]', 'light') %>
+        <%= label_tag(:light, "Light") %>
+    </div>
+    <div class="col-md-3">
+        <%= check_box_tag('flavor[]', 'dark') %>
+        <%= label_tag(:dark, "Dark") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'intense') %>
+        <%= label_tag(:intense, "Intense") %>
+        <br>
+        <%= check_box_tag('flavor[]', 'challenging') %>
+        <%= label_tag(:challenging, "Challenging") %>
+    </div>
+<br>
+  <button type="submit" class="btn btn-default">Submit</button>
 
 <% end %>
