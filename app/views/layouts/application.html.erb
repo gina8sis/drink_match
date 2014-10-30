@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.png', rel: 'shortcut icon', type: 'image/png' %>
+  <%= favicon_link_tag 'url http://imgur.com/dZF75KD', rel: 'shortcut icon', type: 'image/png' %>
 
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +31,8 @@
   <section>
     <%= yield %>
   </section>
+
+  <footer>&copy; Copyright Rabbit of throughtheliquorglass.com with massive help from DT & Larlyn.</footer>
 
 </div>
 

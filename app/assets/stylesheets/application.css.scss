@@ -66,7 +66,9 @@ section {
 }
 
 
-
+footer {
+  font-size: .75em;
+}
 
 
 /* Output card. entire container, keeps perspective */
@@ -155,7 +157,8 @@ section {
 .card .user{
     border-radius: 50%;
     display: block;
-    height: 120px;
+    height:
+    120px;
     margin: -55px auto 0;
     overflow: hidden;
     width: 120px;
@@ -189,10 +192,16 @@ section {
     font-weight: 400;
     line-height: 20px;
 }
+
+.content .recipe {
+    margin-left: 20px;
+}
+
 .card .profession{
     color: #999999;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 .card .footer {
     border-top: 1px solid #EEEEEE;

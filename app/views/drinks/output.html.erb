@@ -7,10 +7,10 @@
     <div class="card">
         <div class="front">
             <div class="cover">
-                <img src="images/rotating_card_thumb3.png"/>
+                <img src="http://www.laminex.com.au/uploads/products/Carrera_Marble-large.jpg"/>
             </div>
             <div class="user">
-                <img class="img-circle" src="images/rotating_card_profile.png"/>
+                <img class="img-circle" src="http://media-cache-ec0.pinimg.com/736x/51/79/3d/51793dd5fe267a6024353078fb13c767.jpg"/>
             </div>
             <div class="content">
                 <div class="main">
@@ -36,7 +36,10 @@
                 <div class="main">
                     <h4 class="text-center"></h4>
                     <h3 class="name"><%= @drinks[0].name %></h3>
-                    <p><%= @drinks[0].recipe %></p>
+                    <p class="recipe"><% @drinks[0].recipe.each do |key,value| %>
+                        <%= simple_format h(value) %>
+                        <% end %>
+                    </p>
                     <p class="profession"><%= @drinks[0].description %></p>
                     <h4 class="text-center"></h4>
                     <p></p>
