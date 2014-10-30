@@ -23,13 +23,20 @@ class DrinksController < ApplicationController
   end
 
   def third_screen
-   session['game']['flavor'] = params[:flavor]
+   session['game']['flavor'] = params[:flavor].map {|f| f.capitalize }
    redirect_to '/output'
   end
 
   def output
-    @drink = Drink.first
 
+    occasion_drinks = Occasion.find_by(:name => 'vacation').drinks
+    season_drinks = Season.find_by(:name => session['game']['season']).drinks
+    flavors = Flavor.where(:descriptor => session['game']['flavor'])
+    flavor_drinks = flavors.first.drinks & flavors.last.drinks
+
+
+    total = occasion_drinks & season_drinks & flavor_drinks
+    @drinks = total.sample(3)
   end
 
   def get_drink
@@ -38,6 +45,7 @@ class DrinksController < ApplicationController
 
   def new
     @drink = Drink.new
+    @drink.save
   end
 
   def create
@@ -59,9 +67,18 @@ end
 
   def update
     @drink = Drink.find(params[:id])
-    @drink.save
+    @drink.update(drink_params)
+
+    # @drink.save
     redirect_to(show_path)
   end
+
+  private
+
+  def drink_params
+    params.require(:drink).permit(:name, :description, :recipe, :color, :strength, :risk, :recipe_list)
+  end
+
 
 
 end

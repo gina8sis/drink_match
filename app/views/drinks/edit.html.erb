@@ -10,7 +10,7 @@
   </div>
   <div class="form-group">
     <%= f.label :recipe %>
-    <%= f.text_area :recipe, :class => "form-control", :rows => '3' %>
+    <%= f.text_area :recipe_list, :class => "form-control", :rows => '4' %>
   </div>
   <div class="form-group">
     <%= f.label :strength %>
@@ -25,78 +25,20 @@
     <%= f.select :color, %w(light dark), {},  :class => "form-control" %>
   </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= check_box_tag(:day_party) %>
-    <%= label_tag(:day_party, "Day Party Drink") %>
-    <br>
-    <%= check_box_tag(:vacation) %>
-    <%= label_tag(:vacation, "Vacation Drink") %>
-  </div>
-
-  <div class="col-md-4">
-    <%= check_box_tag(:day_drinking) %>
-    <%= label_tag(:day_drinking, "Day Drinking") %>
-  <br>
-    <%= check_box_tag(:dinner_drinks) %>
-    <%= label_tag(:dinner_drinks, "Dinner Drinks") %>
-  </div>
-   <div class="col-md-4">
-    <%= check_box_tag(:evening_drinks) %>
-    <%= label_tag(:evening_drinks, "Evening Drinks") %>
-    <br>
-    <%= check_box_tag(:night_in) %>
-    <%= label_tag(:night_in, "A Night In") %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-3">
-
-  <%= check_box_tag(:fruity) %>
-  <%= label_tag(:fruity, "Fruity") %>
-  <br>
-  <%= check_box_tag(:tropical) %>
-  <%= label_tag(:tropical, "Tropical") %>
-  <br>
-  <%= check_box_tag(:bitter) %>
-  <%= label_tag(:bitter, "Bitter") %>
-</div>
-
-<div class="col-md-3">
-  <%= check_box_tag(:herbal) %>
-  <%= label_tag(:herbal, "Herbal") %>
-  <br>
-  <%= check_box_tag(:citrusy) %>
-  <%= label_tag(:citrusy, "Citrusy") %>
-  <br>
-  <%= check_box_tag(:sweet) %>
-  <%= label_tag(:sweet, "Sweet") %>
-  </div>
-
-  <div class="col-md-3">
-    <%= check_box_tag(:dry) %>
-    <%= label_tag(:dry, "Dry") %>
-    <br>
-    <%= check_box_tag(:refreshing) %>
-    <%= label_tag(:refreshing, "Refreshing") %>
-    <br>
-    <%= check_box_tag(:light) %>
-    <%= label_tag(:light, "Light") %>
-  </div>
-  <div class="col-md-3">
-  <%= check_box_tag(:dark) %>
-  <%= label_tag(:dark, "Dark") %>
-  <br>
-  <%= check_box_tag(:intense) %>
-  <%= label_tag(:intense, "Intense") %>
-  <br>
-  <%= check_box_tag(:challenging) %>
-  <%= label_tag(:challenging, "Challenging") %>
-
-  </div>
-</div>
 
 <button type="submit" class="btn btn-default">Edit</button>
 
 <% end %>
+
+<div class="row">
+  <div class="col-md-12"><%= link_to 'Add Occasion', new_drink_path, class: "btn btn-default" %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12"><%= link_to 'Add Season', new_drink_path, class: "btn btn-default" %>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-12"><%= link_to 'Add Flavor', new_drink_path, class: "btn btn-default" %>
+</div>
+</div>
