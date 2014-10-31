@@ -29,7 +29,7 @@ class DrinksController < ApplicationController
 
   def output
 
-    occasion_drinks = Occasion.find_by(:name => 'vacation').drinks
+    occasion_drinks = Occasion.find_by(:name => session['game']['occasion']).drinks
     season_drinks = Season.find_by(:name => session['game']['season']).drinks
     flavors = Flavor.where(:descriptor => session['game']['flavor'])
     flavor_drinks = flavors.first.drinks & flavors.last.drinks
