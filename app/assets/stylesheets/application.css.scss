@@ -22,7 +22,7 @@ header {
 }
 
 html h1 a {
-  color: #EFE543;
+  color: rgba(223,223,17,1);
 text-transform: uppercase;
 font-size: 4em;
 display: inline;
@@ -30,7 +30,7 @@ line-height: 1em;
 }
 
 html h1 a:hover {
-  color: #FFFF31;
+  color: rgba(255,255,49,1);
   text-decoration: none;
 }
 
@@ -69,9 +69,23 @@ section {
 
 footer {
   font-size: .75em;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  background-color: rgba(223,223,17,1);
+  color: black;
+  width: 100%;
+
+}
+
+footer p {
   margin-left: 15%;
+  padding-top: 1%;
+  display: inline;
+}
+
+footer i {
+ padding-left: 55%;
+ font-size: 1em;
 }
 
 
@@ -309,4 +323,13 @@ footer {
         z-index: 5;
         visibility: visible;
     }
+}
+
+
+/* media queries */
+
+@media (max-width: 600px) {
+  #search {
+    display: none;
+  }
 }
