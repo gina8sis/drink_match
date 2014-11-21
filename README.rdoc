@@ -2,7 +2,11 @@
 
 I created this app to solve a personal problem: what to drink! This app is meant to encourage the discovery of new cocktails. It uses a basic algorithm to filter mood, time of day, weather and taste preference to pair and suggest a cocktail. The user will navigate through a few questions and then the app will offer one to three drinks that match the criteria. The user can then ask their bartender to make the cocktail or make at home. 
 
-Features:
+== Find it at:
+
+http://drinkmatch.herokuapp.com/
+
+== Features:
 
 * Built with Ruby on Rails
 
