@@ -1,6 +1,10 @@
 == Drink Match
 
-I created this app to solve a personal problem: what to drink! This app is meant to encourage the discovery of new cocktails. It uses a basic algorithm to filter mood, time of day, weather and taste preference to pair and suggest a cocktail. The user will navigate through a few questions and then the app will offer one to three drinks that match the criteria. The user can then ask their bartender to make the cocktail or make at home. 
+I created this app to solve a personal problem: what to drink! This app is meant to encourage the discovery of new cocktails. It uses a basic algorithm to filter mood, time of day, weather and taste preference to pair and suggest a cocktail. The user will navigate through a few questions and then the app will offer one to three drinks that match the criteria. The user can then ask their bartender to make the cocktail or use the prodived recipe to make at home. 
+
+== Timeline
+
+Built in one week.
 
 == Find it at:
 
@@ -10,12 +14,19 @@ http://drinkmatch.herokuapp.com/
 
 * Built with Ruby on Rails
 
-* Bootstrap Framework
+* Bootstrap front-end framework
 
-* SQL database
+* PostgreSQL database
 
 * Database creation
 
 * Database initialization
 
 
+== Planned Upcoming features
+
+* Login with Twitter
+
+* Saving of favorite drinks and sharing on Twitter
+
+* Expanding database beyond the 60 current cocktails
