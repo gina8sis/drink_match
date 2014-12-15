@@ -23,7 +23,7 @@ http://drinkmatch.herokuapp.com/
 * Database initialization
 
 
-== Planned Upcoming features
+== Planned Upcoming features:
 
 * Login with Twitter
 
