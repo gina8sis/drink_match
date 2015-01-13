@@ -1,28 +1,32 @@
-== README
+== Drink Match
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this app to solve a personal problem: what to drink! This app is meant to encourage the discovery of new cocktails. It uses a basic algorithm to filter mood, time of day, weather and taste preference to pair and suggest a cocktail. The user will navigate through a few questions and then the app will offer one to three drinks that match the criteria. The user can then ask their bartender to make the cocktail or use the prodived recipe to make at home. 
 
-Things you may want to cover:
+== Timeline
 
-* Ruby version
+Built in one week.
 
-* System dependencies
+== Find it at:
 
-* Configuration
+http://drinkmatch.herokuapp.com/
+
+== Features:
+
+* Built with Ruby on Rails
+
+* Bootstrap front-end framework
+
+* PostgreSQL database
 
 * Database creation
 
 * Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+== Planned Upcoming features:
 
-* Deployment instructions
+* Login with Twitter
 
-* ...
+* Saving of favorite drinks and sharing on Twitter
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Expanding database beyond the 60 current cocktails
