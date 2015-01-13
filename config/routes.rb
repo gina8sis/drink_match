@@ -6,7 +6,7 @@ get '/occasion' => 'occasions#index'
 post '/occasion' => 'drinks#first_screen'#, :as => 'season_path'
 
 get '/season' => 'seasons#index'
-post '/<seaso></seaso>n' => 'drinks#second_screen'
+post '/season' => 'drinks#second_screen'
 
 get '/flavor' => 'flavors#index'
 post '/flavor' => 'drinks#third_screen'
