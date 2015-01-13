@@ -1,11 +1,11 @@
-<h2>So, it's <%= Time.now.strftime("%I:%M%p") %>. What are you up to?</h2>
+<h2>So, it's
+    <script>
+   var dateHere = new Date().toString("hh:mm tt")
+   document.write(dateHere);
+
+  </script>. What are you up to?</h2>
 
 <p id="time"></p>
-
-<script>
-var d = new Date();
-document.getElementById("time").innerHTML = d.getHours();
-</script>
 
 
 <%= form_tag '/occasion' do %>
