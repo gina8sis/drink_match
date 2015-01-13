@@ -1,12 +1,9 @@
-<h2>So, it's
-    <script>
+<h2>So, it's <span id="time"></span>. What are you up to?</h2>
+
+<script>
    var dateHere = new Date().toString("hh:mm tt")
-   document.write(dateHere);
-
-  </script>. What are you up to?</h2>
-
-<p id="time"></p>
-
+document.getElementById("time").innerHTML=dateHere
+  </script>
 
 <%= form_tag '/occasion' do %>
   <% if Time.now.hour < 18 %>
