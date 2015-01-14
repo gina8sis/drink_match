@@ -5,6 +5,13 @@
 document.getElementById("time").innerHTML=dateHere
   </script>
 
+  <script>
+function myFunction() {
+    var d = new Date();
+    var n = d.getHours();
+}
+</script>
+
 <%= form_tag '/occasion' do %>
   <% if Time.now.hour < 18 %>
 

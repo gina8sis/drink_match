@@ -7,6 +7,7 @@ class DrinksController < ApplicationController
     @drinks = Drink.where(:name => params[:search])
     @drink_recipe = Drink.where('recipe ILIKE :search', search: "%#{ params[:search] }%")
     @drinks = (@drinks + @drink_recipe).uniq
+    redirect_to '/output'
   end
 
 
